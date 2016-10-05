@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application
+class Receiving extends Application
 {
 
 	/**
@@ -19,8 +19,16 @@ class Welcome extends Application
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'welcome_message';
+		$this->data['pagebody'] = 'supplies';
 		$this->render(); 
 	}
+        
+        public function justone($code){
+            $this->data['pagebody'] = 'justone_supplies';		
+		$source = $this->supplies->get($code);
+		$this->data = array_merge($this->data, $source);
+		$this->render();
+        }
+        
 
 }
