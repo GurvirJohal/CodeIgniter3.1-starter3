@@ -2,33 +2,40 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Description of Receiving
+ *
+ * @author Theresa
+ */
 class Receiving extends Application
 {
+        /**
+         * Default Constructor
+         */
+	function __construct()
+	{
+		parent::__construct();
+	}
 
 	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/
-	 * 	- or -
-	 * 		http://example.com/welcome/index
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 * Homepage for our app
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'supplies';
-		$this->render(); 
+            $this->load->model('supplies');
+            $this->data['pagebody'] = 'homepage';
+
+            // build the list of authors, to pass on to our view
+            $source = $this->supplies->all();
+            $supplies = array ();
+            foreach ($source as $record)
+            {
+                    $supplies[] = array ('code' => $record['code']);
+            }
+            $this->data['supplies'] = $supplies;
+
+            $this->render();
+            
 	}
-        
-        public function justone($code){
-            $this->data['pagebody'] = 'justone_supplies';		
-		$source = $this->supplies->get($code);
-		$this->data = array_merge($this->data, $source);
-		$this->render();
-        }
-        
 
 }

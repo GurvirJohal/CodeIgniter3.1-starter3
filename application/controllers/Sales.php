@@ -2,33 +2,40 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * Description of Sales
+ *
+ * @author Theresa
+ */
 class Sales extends Application
 {
 
+        /**
+         * Default Constructor
+         */
+	function __construct()
+	{
+		parent::__construct();
+	}
+
 	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/
-	 * 	- or -
-	 * 		http://example.com/welcome/index
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 * Homepage for our app
 	 */
 	public function index()
 	{
-		$this->data['pagebody'] = 'stock';
-		$this->render(); 
+            $this->load->model('stock');
+            $this->data['pagebody'] = 'homepage';
+
+            // build the list of authors, to pass on to our view
+            $source = $this->stock->all();
+            $stock = array ();
+            foreach ($source as $record)
+            {
+                    $stock[] = array ('code' => $record['code']);
+            }
+            $this->data['stock'] = $stock;
+
+            $this->render();
 	}
-        
-        public function justone($code){
-            $this->data['pagebody'] = 'justone_stock';		
-		$source = $this->stock->get($code);
-		$this->data = array_merge($this->data, $source);
-		$this->render();
-        }
-        
 
 }
