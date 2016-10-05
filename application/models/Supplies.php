@@ -76,6 +76,15 @@ class Supplies extends CI_Model{
 				return $record;
 		return null;
 	}
+
+        /**
+         * Adjust the quantity of a supply item
+         * @param type $code
+         * @param type $amount
+         */
+        public function adjustQuantity($code, $amount){
+            get($code)->quantity += $amount;
+        }
         
 	/**
          * Returns the array

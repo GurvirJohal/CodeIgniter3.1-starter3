@@ -49,6 +49,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'production';
+//$route['(^comp\d+)/:any'] = 'Wise/bingo';
+//$route['show/(:num)'] = 'first/gimme/$1';
+//$route['lock/(:any)/(:any)'] = 'welcome/shucks';
+//$route['sleep'] = 'first/zzz';
+//$route['dunno'] = function(){
+//    $source = './pix/Pig-Wallpaper-150x150.jpg';
+//    // set the mine type for the image
+//    header("Content-type: image/jpeg");
+//    header('Content-Distribution: inline');
+//    readfile($source);
+//    die();
+//};
+
+//$route['([a-zA-Z]{4})/bingo'] = '/bingo';
+//$route['default_controller'] = 'homepage';
+$route['default_controller'] = 'sales';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
