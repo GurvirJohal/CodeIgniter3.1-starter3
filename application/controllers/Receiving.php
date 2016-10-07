@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /**
  * Receiving Controller
  *
- * @author Thach
+ * @author Theresa
  */
 class Receiving extends Application
 {
