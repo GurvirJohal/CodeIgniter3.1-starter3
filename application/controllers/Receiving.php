@@ -49,6 +49,7 @@ class Receiving extends Application
         $this->render();
     }
 	
+	
 	// gets the calculated cost
 	public function getCost() {
 		return ($_GET['receiving_unit'] * $this->getRcost());
