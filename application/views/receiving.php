@@ -2,7 +2,7 @@
 	<center><h4>Inventory.</h4></center><br>
 	{supplies}
 	<div class="span3x">
-		<p>{name}<p></br>
+		<p><a href="/supply/{code}">{name}<p><a></br>
 		<p>{description}<p></br>
 		<form action="/Receiving/receipt">
 			<label>Order </label>

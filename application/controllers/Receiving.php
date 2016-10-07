@@ -30,14 +30,24 @@ class Receiving extends Application
             $supplies = array ();
             foreach ($source as $record)
             {
-                    $supplies[] = array ('name' => $record['name'], 'description' => $record['description'],
-					'receiving_unit' => $record['receiving_unit']);
+                    $supplies[] = array ('code' => $record['code'], 'name' => $record['name'],
+					'description' => $record['description'], 'receiving_unit' => $record['receiving_unit'],
+					'receiving_cost' => $record['receiving_cost'], 'stocking_unit' => $record['stocking_unit'],
+					'quantity' => $record['quantity']);
             }
             $this->data['supplies'] = $supplies;
 
             $this->render();
             
 	}
+	
+	public function gimme($id)
+    {
+        $this->data['pagebody'] = 'justoneR';		
+        $source = $this->supplies->get($id);
+        $this->data = array_merge($this->data, $source);
+        $this->render();
+    }
 	
 	// gets the calculated cost
 	public function getCost() {

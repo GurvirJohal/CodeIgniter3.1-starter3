@@ -65,6 +65,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['default_controller'] = 'homepage';
 
 $route['item/(:num)'] = 'sales/gimme/$1';
+$route['supply/(:num)'] = 'receiving/gimme/$1';
 $route['default_controller'] = 'homepage';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

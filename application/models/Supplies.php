@@ -179,15 +179,15 @@ class Supplies extends CI_Model{
 	}
         
         /**
-         * Retrieve a single supply by quote
-         * @param type $code
-         * @return type
+         * Retrieve a single supply by code
+         * @param $code
+         * @return $record
          */
-	public function get($code)
+	public function get($id)
 	{
 		// iterate over the data until we find the one we want
 		foreach ($this->data as $record)
-			if ($record['code'] == $code)
+			if ($record['code'] == $id)
 				return $record;
 		return null;
 	}
@@ -197,10 +197,12 @@ class Supplies extends CI_Model{
          * @param type $code
          * @param type $amount
          */
-        public function adjustQuantity($code, $amount){
+        /*
+		 * for next Assignment
+		public function adjustQuantity($code, $amount){
             get($code)->quantity += $amount;
         }
-        
+        */
 	/**
          * Returns the array
          * @return type array
