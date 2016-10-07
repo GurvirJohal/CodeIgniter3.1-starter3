@@ -5,11 +5,18 @@
 		<p>{code}<p></br>
 		<form>
 			<input type="text" name="receiving_unit">
-			<input type="submit">
+			<input type="submit" name="submit">
 		</form>		
 	</div>
 	{/supplies}
 </div>
 
-<?php receipt(); ?><br/>
-<?php totalCost(); ?><br/>
+<?php
+/* Triggers receipt & totalCost function on submit
+	which logs the transaction and totalCost
+*/
+if (isset($_REQUEST['submit'])) {
+    receipt();
+	totalCost();
+}
+?>
