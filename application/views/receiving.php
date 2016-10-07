@@ -3,7 +3,7 @@
 	{supplies}
 	<div class="span3x">
 		<p>{code}<p></br>
-		<form action="index.php/Receiving/receipt">
+		<form action="/Receiving/receipt">
 			<input type="text" name="receiving_unit">
 			<input type="submit" name="submit">
 		</form>		
