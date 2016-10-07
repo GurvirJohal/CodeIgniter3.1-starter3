@@ -7,7 +7,5 @@
         <p>{quantity} left in stock</p><br/>
     </div>
     
-    
-    
     {/stock}
 </div>
