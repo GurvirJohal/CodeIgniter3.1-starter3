@@ -4,6 +4,7 @@
 	<div class="span3x">
 		<p>{code}<p></br>
 		<form action="/Receiving/receipt">
+			<label>Order </label>
 			<input type="text" name="receiving_unit">
 			<input type="submit" name="submit">
 		</form>		

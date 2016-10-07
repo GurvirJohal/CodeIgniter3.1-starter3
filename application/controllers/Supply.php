@@ -23,14 +23,16 @@ class Receiving extends Receiving
 	public function index()
 	{
             $this->load->model('supplies');
-            $this->data['pagebody'] = 'receiving';
+            $this->data['pagebody'] = 'supply';
 
             // gets a single supply
-            $source = $this->supplies->get();
+			// hardcode 0 for testing
+            $source = $this->supplies->get('0');
             $supplies = array ();
             foreach ($source as $record)
             {
-                    $supplies[] = array ('code' => $record['code']['receiving_unit']);
+                    $supplies[] = array ('code' => $record['name']['description']['receiving_unit']
+					['receiving_cost']['stocking_unit']['quantity']);
             }
             $this->data['supplies'] = $supplies;
 
