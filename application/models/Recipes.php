@@ -94,8 +94,8 @@ class Recipes extends CI_Model{
         foreach ($this->data as $record)
             if ($record['code'] == $code)
                 return $record;
-            return null;
-	}
+        return null;
+    }
        
     /**
     * Retrieve all of the recipes
