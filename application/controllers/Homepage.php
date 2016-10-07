@@ -24,8 +24,7 @@ class Homepage extends Application
 	{
             // this is the view we want shown
             $this->data['pagebody'] = 'homepage';
-
-            echo("This is the homepage");
+            $this->render();
 	}
 
 }

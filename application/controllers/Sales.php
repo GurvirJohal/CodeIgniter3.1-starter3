@@ -24,14 +24,14 @@ class Sales extends Application
 	public function index()
 	{
             $this->load->model('stock');
-            $this->data['pagebody'] = 'homepage';
+            $this->data['pagebody'] = 'sales';
 
             // build the list of authors, to pass on to our view
-            $source = $this->stock->all();
+            $source = $this->stock->all(); 
             $stock = array ();
             foreach ($source as $record)
             {
-                    $stock[] = array ('code' => $record['code']);
+                    $stock[] = array ('code' => $record['code'], 'description' => $record['description'], 'quantity' => $record['quantity'], 'price' => $record['price']);
             }
             $this->data['stock'] = $stock;
 
