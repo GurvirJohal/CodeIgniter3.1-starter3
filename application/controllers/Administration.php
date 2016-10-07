@@ -23,9 +23,8 @@ class Administration extends Application
 	public function index()
 	{
             // this is the view we want shown
-            $this->data['pagebody'] = 'homepage';
-
-            echo("This is the administration page");
+            $this->data['pagebody'] = 'administration';
+            $this->render();
 	}
 
 }

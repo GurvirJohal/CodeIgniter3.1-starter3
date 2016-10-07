@@ -1,5 +1,5 @@
 <div class="row">
-	<center><h4>Inventory.</h4></center><br>
+	<center><h4>Inventory</h4></center><br>
 	{supplies}
 	<div class="span3x">
 		<p>{name}<p></br>
