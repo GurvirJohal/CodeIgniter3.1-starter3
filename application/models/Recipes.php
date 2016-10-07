@@ -9,70 +9,77 @@ class Recipes extends CI_Model{
     //Initialize the array of recipes
     var $data = array(
 		array(
-                    'code' => 'refresh',
-                    'description' => 'sharpen concentration, increase stamina, and revitalize your senses',
+                    'code' => '0',
+                    'name' => 'Refresh',
+                    'description' => 'Sharpen concentration, increase stamina, and revitalize your senses',
                     'ingredients' => array(
-                                        'spearmint' => '1',
-                                        'lavendar' => '1',
-                                        'eucalyptus' => '1',
-                                        'lemon' => '1',
-                                        'rosewood' => '.5',
-                                        'cedarwood' => '.5')),
+                                        'Spearmint' => '1',
+                                        'Lavendar' => '1',
+                                        'Eucalyptus' => '1',
+                                        'Lemon' => '1',
+                                        'Rosewood' => '.5',
+                                        'Cedarwood' => '.5')),
                 
                 array(
-                    'code' => 'cloud nine', 
-                    'description' => 'lift your spirits', 
+                    'code' => '1', 
+                    'name' => 'Cloud nine', 
+                    'description' => 'Lift your spirits', 
                     'ingredients' => array(
-                                        'lavendar' => '2',
-                                        'ylang' => '1',
-                                        'neroli' => '1',
-                                        'sandalwood' => '1')),
+                                        'Lavendar' => '2',
+                                        'Ylang' => '1',
+                                        'Neroli' => '1',
+                                        'Sandalwood' => '1')),
                 
                 array(
-                    'code' => 'energy',
-                    'description' => 'invigorate and refresh your mind and body', 
+                    'code' => '2',
+                    'name' => 'Energy',
+                    'description' => 'Invigorate and refresh your mind and body', 
                     'ingredients' => array(
-                                        'peppermint' => '1.5',
-                                        'rosemary' => '1',
-                                        'lemon' => '1',
-                                        'bergamot' => '1',
-                                        'basil' => '.5')),
+                                        'Peppermint' => '1.5',
+                                        'Rosemary' => '1',
+                                        'Lemon' => '1',
+                                        'Bergamot' => '1',
+                                        'Basil' => '.5')),
                 
                 array(
-                    'code' => 'exhale', 
-                    'description' => 'an exhilarating essential oil blend that renews and strengthens', 
+                    'code' => '3', 
+                    'name' => 'Exhale', 
+                    'description' => 'An exhilarating essential oil blend that renews and strengthens', 
                     'ingredients' => array(
-                                        'eucalyptus' => '2',
-                                        'peppermint' => '1.5',
-                                        'rosemary' => '1',
-                                        'ginger' => '.5')),
+                                        'Eucalyptus' => '2',
+                                        'Peppermint' => '1.5',
+                                        'Rosemary' => '1',
+                                        'Ginger' => '.5')),
                 
                 array(
-                    'code' => 'citrus dream',
-                    'description' => 'for promoting a sense of calmness and positivity',
+                    'code' => '4',
+                    'name' => 'Citrus Dream',
+                    'description' => 'For promoting a sense of calmness and positivity',
                     'ingredients' => array(
-                                        'orange' => '2.5',
-                                        'grapefruit' => '1',
-                                        'lemon' => '1',
-                                        'neroli' => '.5')),
+                                        'Orange' => '2.5',
+                                        'Grapefruit' => '1',
+                                        'Lemon' => '1',
+                                        'Neroli' => '.5')),
                 
                 array(
-                    'code' => 'tranquility',
-                    'description' => 'for a deeper, more restful sleep',
+                    'code' => '5',
+                    'name' => 'Tranquility',
+                    'description' => 'For a deeper, more restful sleep',
                     'ingredients' => array(
-                                        'orange' => '1.5',
-                                        'lavendar' => '1.5',
-                                        'marjoram' => '1',
-                                        'chamomile' => '1')),
+                                        'Orange' => '1.5',
+                                        'Lavendar' => '1.5',
+                                        'Marjoram' => '1',
+                                        'Chamomile' => '1')),
                 
                 array(
-                    'code' => 'unwind',
-                    'description' => 'melt away stress and ease tension with this uplifting blend',
+                    'code' => '6',
+                    'name' => 'Unwind',
+                    'description' => 'Melt away stress and ease tension with this uplifting blend',
                     'ingredients' => array(
-                                        'orange' => '2',
-                                        'lavendar' => '1.5',
-                                        'bergamot' => '1',
-                                        'geranium' => '.5'))
+                                        'Orange' => '2',
+                                        'Lavendar' => '1.5',
+                                        'Bergamot' => '1',
+                                        'Geranium' => '.5'))
     );
         
     /**
