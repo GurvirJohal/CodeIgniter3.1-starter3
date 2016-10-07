@@ -30,7 +30,7 @@ class Receiving extends Application
             $supplies = array ();
             foreach ($source as $record)
             {
-                    $supplies[] = array ('code' => $record['code']);
+                    $supplies[] = array ('code' => $record['description']['receiving_unit']);
             }
             $this->data['supplies'] = $supplies;
 
@@ -57,6 +57,13 @@ class Receiving extends Application
 		fwrite($file,$log."<br/>");
 		fclose($file);
 		
+		$myfile = fopen("log.txt", "r") or die("Unable to open file!");
+		echo fread($myfile,filesize("log.txt"));
+		fclose($myfile);
+	}
+	
+	//Read information from the receipt log file
+	public function readReceipt() {
 		$myfile = fopen("log.txt", "r") or die("Unable to open file!");
 		echo fread($myfile,filesize("log.txt"));
 		fclose($myfile);
