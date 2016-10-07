@@ -39,7 +39,7 @@
                     </tr>
                 {/stock}
                 </table>
-                <input type="submit" name="submit">
+                <!--<input type="submit" name="submit">-->
             </form>
         </center>
 </div>

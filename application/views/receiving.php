@@ -1,14 +1,35 @@
 <div class="row">
-	<center><h4>Inventory.</h4></center><br>
-	{supplies}
+	<center><h4>Inventory</h4></center><br>
+	
+        <!--{supplies}
 	<div class="span3x">
-		<p><a href="/supply/{code}">{name}<p><a></br>
+		<p><a href="/supply/{code}">{name}<p></a></br>
 		<p>{description}<p></br>
-		<form action="/Receiving/receipt">
 			<label>Order </label>
 			<input type="text" name="receiving_unit">
-			<input type="submit" name="submit">
 		</form>		
 	</div>
-	{/supplies}
+	{/supplies}-->
+        
+        <center>
+            <form action="/Receiving/receipt">
+                <table border="1" cellpadding="5px">
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Order</th>
+                    </tr>
+                {supplies}
+                    <tr align="center">
+                    <td><a href="/supply/{code}">{name}<a></td>
+                        <td>{description}</td>
+                        <td><input type="text" name="receiving_unit" style="width:20px"></td>
+                    </tr>
+                {/supplies}
+                </table>
+                <input type="submit" name="submit">
+            </form>
+        </center>
+        
+        
 </div>
