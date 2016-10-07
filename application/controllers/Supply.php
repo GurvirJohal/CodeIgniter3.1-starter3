@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author Thach
  */
-class Receiving extends Receiving
+class Receiving extends Application
 {
         /**
          * Default Constructor
@@ -39,3 +39,4 @@ class Receiving extends Receiving
             $this->render();
             
 	}
+}
