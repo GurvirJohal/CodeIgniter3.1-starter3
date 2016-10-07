@@ -3,20 +3,10 @@
 	{supplies}
 	<div class="span3x">
 		<p>{code}<p></br>
-		<form>
+		<form action="index.php/Receiving/receipt">
 			<input type="text" name="receiving_unit">
 			<input type="submit" name="submit">
 		</form>		
 	</div>
 	{/supplies}
 </div>
-
-<?php
-/* Triggers receipt & totalCost function on submit
-	which logs the transaction and totalCost
-*/
-if (isset($_REQUEST['submit'])) {
-    receipt();
-	totalCost();
-}
-?>

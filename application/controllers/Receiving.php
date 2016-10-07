@@ -40,7 +40,7 @@ class Receiving extends Application
 	
 	// gets the calculated cost
 	public function getCost() {
-		return ($_GET['receiving_unit'] * getRcost());
+		return ($_GET['receiving_unit'] * $this->getRcost());
 	}
 	
 	// gets the receiving unit cost
@@ -51,7 +51,7 @@ class Receiving extends Application
 	// logs the transaction to a file and writes to it
 	// reads and shows the file output 
 	public function receipt() {
-		$log = $_GET['receiving_unit'] . " lavendar(s) was received at the cost of $" . getCost() . ".";
+		$log = $_GET['receiving_unit'] . " lavendar(s) was received at the cost of $" . $this->getCost() . ".";
 		
 		$file = fopen("log.txt","w");
 		fwrite($file,$log."<br/>");
@@ -65,7 +65,7 @@ class Receiving extends Application
 	// logs the cost for total cost of supplies
 	// adds 1000 for testing purposes
 	public function totalCost() {
-		$cost = getCost();
+		$cost = $this->getCost();
 		$file2 = fopen("log2.txt","w");
 		fwrite($file2,$cost+1000);
 		fclose($file2);
