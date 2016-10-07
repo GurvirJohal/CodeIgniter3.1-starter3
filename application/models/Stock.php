@@ -36,7 +36,8 @@ class Stock extends CI_Model{
                     'code' => '3', 
                     'name' => 'Exhale', 
                     'description' => 'An exhilarating essential oil blend that renews and strengthens',  
-                    'quantity' => '4', 'price' => '$12.95'),
+                    'quantity' => '4', 
+                    'price' => '$12.95'),
                 array(
                     'code' => '4', 
                     'name' => 'Citrus Dream', 
@@ -70,11 +71,11 @@ class Stock extends CI_Model{
          * @param $code
          * @return $record
          */
-	public function get($code)
+	public function get($id)
 	{
 		// iterate over the data until we find the one we want
 		foreach ($this->data as $record)
-			if ($record['code'] == $code)
+			if ($record['code'] == $id)
 				return $record;
 		return null;
 	}

@@ -64,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['([a-zA-Z]{4})/bingo'] = '/bingo';
 //$route['default_controller'] = 'homepage';
 
+$route['item/(:num)'] = 'sales/gimme/$1';
 $route['default_controller'] = 'homepage';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
