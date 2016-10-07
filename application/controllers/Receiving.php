@@ -3,9 +3,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Description of Receiving
+ * Receiving Controller
  *
- * @author Theresa
+ * @author Thach
  */
 class Receiving extends Application
 {
@@ -37,14 +37,19 @@ class Receiving extends Application
             $this->render();
             
 	}
+	
+	// gets the calculated cost
 	public function getCost() {
 		return ($_GET['receiving_unit'] * getRcost());
 	}
-
+	
+	// gets the receiving unit cost
 	public function getRcost() {
 		return 30;
 	}
 
+	// logs the transaction to a file and writes to it
+	// reads and shows the file output 
 	public function receipt() {
 		$log = $_GET['receiving_unit'] . " lavendar(s) was received at the cost of $" . getCost() . ".";
 		
@@ -56,7 +61,9 @@ class Receiving extends Application
 		echo fread($myfile,filesize("log.txt"));
 		fclose($myfile);
 	}
-
+	
+	// logs the cost for total cost of supplies
+	// adds 1000 for testing purposes
 	public function totalCost() {
 		$cost = getCost();
 		$file2 = fopen("log2.txt","w");
