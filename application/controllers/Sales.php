@@ -38,4 +38,15 @@ class Sales extends Application
             $this->render();
 	}
 
+        public function receipt() {
+            $log = $_GET['receiving_unit'] . " lavendar(s) was received at the cost of $" . $this->getCost() . ".";
+
+            $file = fopen("log.txt","w");
+            fwrite($file,$log."<br/>");
+            fclose($file);
+
+            $myfile = fopen("log.txt", "r") or die("Unable to open file!");
+            echo fread($myfile,filesize("log.txt"));
+            fclose($myfile);
+	}
 }
