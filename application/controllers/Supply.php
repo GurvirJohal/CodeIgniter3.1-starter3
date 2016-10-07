@@ -39,3 +39,4 @@ class Receiving extends Application
             $this->render();
             
 	}
+}
