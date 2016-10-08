@@ -26,5 +26,42 @@ class Homepage extends Application
             $this->data['pagebody'] = 'homepage';
             $this->render();
 	}
-
+	/**
+	* Function for adding content
+	*/
+	public function populate() 
+	        $this->load->model('supplies');
+            //$this->data['pagebody'] = 'receiving';
+            // gets a list of supplies
+            $source = $this->supplies->all();
+            $supplies = array ();
+			
+			//Total
+			$totalCost = 0;
+			
+            foreach ($source as $record)
+            {
+                    //$supplies[] = array ('code' => $record['code'],
+                    //                    'receiving_unit' => $record['receiving_unit'],
+					//'receiving_cost' => $record['receiving_cost'], 'stocking_unit' => $record['stocking_unit'],
+					//'quantity' => $record['quantity']);
+					$rUniut = intval(preg_replace('/[^0-9]+/', '', $record['receiving_unit']), 10);
+					$rCost = intval(preg_replace('/[^0-9]+/', '', $record['receiving_cost']), 10);
+					$inv = intval(preg_replace('/[^0-9]+/', '', $record['quantity']), 10);
+					$totalCost += (($inv / rUniut) * rCost);
+					
+            }
+            echo $totalCost;
+	}
+	/*
+		// gets the calculated cost
+	public function getCost() {
+		return ($_GET['receiving_unit'] * $this->getRcost());
+	}
+	
+	// gets the receiving unit cost
+	public function getRcost() {
+		return 30;
+	}
+	*/
 }
