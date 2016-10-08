@@ -6,7 +6,9 @@
         <input type="text" name="code" placeholder="{code}"><br>
         <input type="text" name="name" placeholder="{name}"><br>
         <input type="text" name="description" placeholder="{description}"><br>
-        <input type="text" name="ingredients" placeholder="{ingredients}"><br>
+        {ingredientList}
+        <input type="text" name="{name}" placeholder="{name} : {amount}mL"><br>
+        {/ingredientList}
         <input type="submit"><br>
     </table>
   </form>

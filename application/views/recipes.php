@@ -6,13 +6,11 @@
                     <tr>
                         <th>Name</th>
                         <th>Description</th>
-                        <th>Ingredients</th>
                     </tr>
                 {recipes}
                     <tr align="center">
                     <td><a href="/editrecipe/{code}">{name}<a></td>
                         <td>{description}</td>
-                        <td>{ingredients}</td>
                     </tr>
                 {/recipes}
                 </table>

@@ -57,7 +57,7 @@ class Supplies extends CI_Model{
                     'quantity' => '6'),
                 array(
                     'code' => '5', 
-                    'name' => 'Ylang', 
+                    'name' => 'Ylang ylang', 
                     'description' => 'Ylang ylang oil', 
                     'receiving_unit' => 'case of 12 bottles', 
                     'receiving_cost' => '$30',
@@ -203,6 +203,15 @@ class Supplies extends CI_Model{
             get($code)->quantity += $amount;
         }
         */
+        
+        public function getSupplyWithName($name){
+            // iterate over the data until we find the one we want
+		foreach ($this->data as $record)
+			if ($record['name'] == $name)
+				return $record;
+		return null;
+        }
+        
 	/**
          * Returns the array
          * @return type array

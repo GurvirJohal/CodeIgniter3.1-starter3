@@ -50,7 +50,7 @@ class Administration extends Application
             $this->load->model('supplies');
             $this->data['pagebody'] = 'editsupply';
 
-            // gets a list of supplies
+            // get the supply
             $source = $this->supplies->get($code);
             $this->data = array_merge($this->data, $source);
             $this->render();
@@ -60,7 +60,7 @@ class Administration extends Application
             $this->load->model('recipes');
             $this->data['pagebody'] = 'recipes';
 
-            // gets a list of supplies
+            // create a list of recipes
             $source = $this->recipes->all();
             $supplies = array ();
             foreach ($source as $record)
@@ -77,8 +77,16 @@ class Administration extends Application
             $this->load->model('recipes');
             $this->data['pagebody'] = 'editrecipe';
 
-            // gets a list of supplies
+            // get the recipe
             $source = $this->recipes->get($code);
+            
+            foreach($source['ingredients'] as $ingredient){
+                $stock = $this->supplies->getSupplyWithName($ingredient['name']);
+            }   $ingredients[] = array('name' => $ingredient['name'], 'amount' => $ingredient['amount']);
+            
+            $this->data['ingredientList'] = $ingredients;
+            $this->data['itemName'] = $source['name'];
+            
             $this->data = array_merge($this->data, $source);
             $this->render();
         }
@@ -87,7 +95,7 @@ class Administration extends Application
             $this->load->model('stock');
             $this->data['pagebody'] = 'stock';
 
-            // gets a list of supplies
+            // create list of stock
             $source = $this->stock->all();
             $supplies = array ();
             foreach ($source as $record)
