@@ -9,7 +9,7 @@
                 
                 {recipes}
                     <tr align="center">
-                        <td><a href="/ingredients/{code}">{name}<a></td> <!-- model/Recipes.php: arrays -->
+                        <td><a href="/production/ingredients/{code}">{name}<a></td> <!-- model/Recipes.php: arrays -->
                     </tr>
                 {/recipes}
                 
