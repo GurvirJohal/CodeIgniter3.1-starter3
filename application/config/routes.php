@@ -67,6 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['sales/item/(:num)'] = 'sales/gimme/$1';
 $route['receiving/supply/(:num)'] = 'receiving/gimme/$1';
 $route['default_controller'] = 'homepage';
+$route['production/ingredients/(:num)'] = 'production/gimme/$1';
 
 //edit routing
 $route['administration/editsupply/(:num)'] = 'administration/editsupply/$1';
