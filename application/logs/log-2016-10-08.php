@@ -17,3 +17,20 @@ ERROR - 2016-10-08 04:34:49 --> 404 Page Not Found: Editrecipe/1
 ERROR - 2016-10-08 17:23:00 --> Severity: Notice --> Undefined variable: material C:\xampp\htdocs\CodeIgniter3.1-starter3\application\controllers\Administration.php 85
 ERROR - 2016-10-08 17:23:00 --> Severity: Notice --> Undefined variable: record C:\xampp\htdocs\CodeIgniter3.1-starter3\application\controllers\Administration.php 88
 ERROR - 2016-10-08 17:23:33 --> Severity: Notice --> Undefined variable: record C:\xampp\htdocs\CodeIgniter3.1-starter3\application\controllers\Administration.php 88
+ERROR - 2016-10-08 21:30:03 --> 404 Page Not Found: Ingredients/2
+ERROR - 2016-10-08 21:35:32 --> 404 Page Not Found: Sales/5
+ERROR - 2016-10-08 21:35:37 --> 404 Page Not Found: Sales/sales
+ERROR - 2016-10-08 21:35:41 --> 404 Page Not Found: Sales/sales
+ERROR - 2016-10-08 21:36:00 --> 404 Page Not Found: Sales%C3%A9/index
+ERROR - 2016-10-08 21:36:04 --> 404 Page Not Found: Sales%C3%A9/index
+ERROR - 2016-10-08 21:36:08 --> 404 Page Not Found: Sales/sales
+ERROR - 2016-10-08 21:36:13 --> 404 Page Not Found: Sales/sales
+ERROR - 2016-10-08 21:36:15 --> 404 Page Not Found: Sales/sales
+ERROR - 2016-10-08 21:36:54 --> 404 Page Not Found: Sales/item
+ERROR - 2016-10-08 21:37:05 --> 404 Page Not Found: Sale/item9
+ERROR - 2016-10-08 21:37:09 --> 404 Page Not Found: Sale/item
+ERROR - 2016-10-08 21:38:47 --> 404 Page Not Found: Supply/0
+ERROR - 2016-10-08 21:39:03 --> 404 Page Not Found: Supply/4
+ERROR - 2016-10-08 21:49:12 --> 404 Page Not Found: Ingredients/0
+ERROR - 2016-10-08 22:05:10 --> 404 Page Not Found: Ingredients/0
+ERROR - 2016-10-08 22:13:50 --> 404 Page Not Found: Ingredients/1

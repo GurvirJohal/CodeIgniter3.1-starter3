@@ -3,9 +3,9 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Description of Homepage
- *
- * @author Theresa
+ * Homepage should be a dashboard of sorts, showing some summary information:
+ * $ spent purchasing inventory, $ received from sales, cost of sales ingredients
+ * consumed. These are derived from the transaction logs.
  */
 class Homepage extends Application
 {
