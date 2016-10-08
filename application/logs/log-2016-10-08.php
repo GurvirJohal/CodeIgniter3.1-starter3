@@ -14,3 +14,6 @@ ERROR - 2016-10-08 04:11:36 --> 404 Page Not Found: Editsupply/0
 ERROR - 2016-10-08 04:27:06 --> 404 Page Not Found: Editsupply/1
 ERROR - 2016-10-08 04:27:28 --> Severity: Parsing Error --> syntax error, unexpected '$route' (T_VARIABLE) C:\xampp\htdocs\CodeIgniter3.1-starter3\application\config\routes.php 74
 ERROR - 2016-10-08 04:34:49 --> 404 Page Not Found: Editrecipe/1
+ERROR - 2016-10-08 17:23:00 --> Severity: Notice --> Undefined variable: material C:\xampp\htdocs\CodeIgniter3.1-starter3\application\controllers\Administration.php 85
+ERROR - 2016-10-08 17:23:00 --> Severity: Notice --> Undefined variable: record C:\xampp\htdocs\CodeIgniter3.1-starter3\application\controllers\Administration.php 88
+ERROR - 2016-10-08 17:23:33 --> Severity: Notice --> Undefined variable: record C:\xampp\htdocs\CodeIgniter3.1-starter3\application\controllers\Administration.php 88
