@@ -24,15 +24,17 @@ class Homepage extends Application
 	{
             // this is the view we want shown
             $this->data['pagebody'] = 'homepage';
-			$this->populate();
+			// this is the data we want loaded onto the view
+			$this->invCal();
+			$this->saleCal();
+			//this makes the view rendered
             $this->render();
 	}
 	/**
-	* Function for adding content
+	* Function for calculating the amount spent on inventory
 	*/
-	public function populate() {
+	public function invCal() {
 	        $this->load->model('supplies');
-            //$this->data['pagebody'] = 'receiving';
             // gets a list of supplies
             $source = $this->supplies->all();
             $supplies = array ();
@@ -40,30 +42,39 @@ class Homepage extends Application
 			//Total
 			$totalCost = 0;
 			
+			//Calculates
             foreach ($source as $record)
             {
-                    //$supplies[] = array ('code' => $record['code'],
-                    //                    'receiving_unit' => $record['receiving_unit'],
-					//'receiving_cost' => $record['receiving_cost'], 'stocking_unit' => $record['stocking_unit'],
-					//'quantity' => $record['quantity']);
 					$rUniut = intval(preg_replace('/[^0-9]+/', '', $record['receiving_unit']), 10);
 					$rCost = intval(preg_replace('/[^0-9]+/', '', $record['receiving_cost']), 10);
 					$inv = intval(preg_replace('/[^0-9]+/', '', $record['quantity']), 10);
 					$totalCost += (($inv / $rUniut) * $rCost);
 					
             }
+			//Makes a data field
 			$this->data['totalCost'] = $totalCost;
-            //echo $totalCost;
 	}
-	/*
-		// gets the calculated cost
-	public function getCost() {
-		return ($_GET['receiving_unit'] * $this->getRcost());
-	}
-	
-	// gets the receiving unit cost
-	public function getRcost() {
-		return 30;
-	}
+	/**
+	* Function for calculating the received from sales
 	*/
-}
+	public function saleCal() {
+	        $this->load->model('supplies');
+            // gets a list of supplies
+            $source = $this->supplies->all();
+            $supplies = array ();
+			
+			//Total
+			$totalInc = 0;
+			
+			//Calculates
+            foreach ($source as $record)
+            {
+					$stock = intval(preg_replace('/[^0-9]+/', '', $record['quantity']), 10);
+					$price = floatval(preg_replace('/[^0-9.+]/', '', $record['price']));
+					$totalInc += ($stock * $price);
+					
+            }
+			//Makes a data field
+			$this->data['totalInc'] = $totalInc;
+	}
+
