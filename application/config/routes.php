@@ -64,14 +64,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['([a-zA-Z]{4})/bingo'] = '/bingo';
 //$route['default_controller'] = 'homepage';
 
-$route['item/(:num)'] = 'sales/gimme/$1';
-$route['supply/(:num)'] = 'receiving/gimme/$1';
+$route['sales/item/(:num)'] = 'sales/gimme/$1';
+$route['receiving/supply/(:num)'] = 'receiving/gimme/$1';
 $route['default_controller'] = 'homepage';
 
 //edit routing
-$route['editsupply/(:num)'] = 'administration/editsupply/$1';
-$route['editstock/(:num)'] = 'administration/editstock/$1';
-$route['editrecipe/(:num)'] = 'administration/editrecipe/$1';
+$route['administration/editsupply/(:num)'] = 'administration/editsupply/$1';
+$route['administration/editstock/(:num)'] = 'administration/editstock/$1';
+$route['administration/editrecipe/(:num)'] = 'administration/editrecipe/$1';
 
 
 $route['404_override'] = '';

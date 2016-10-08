@@ -9,7 +9,7 @@
                     </tr>
                 {supplies}
                     <tr align="center">
-                    <td><a href="/editsupply/{code}">{name}<a></td>
+                    <td><a href="/administration/editsupply/{code}">{name}<a></td>
                         <td>{description}</td>
                     </tr>
                 {/supplies}

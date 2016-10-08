@@ -1,6 +1,7 @@
 <div class="row">
     <center><h4>Welcome to our catalog!</h4></center><br>
-        <!--{stock}
+        <!--Grid view
+        {stock}
         <div class="span3x">
             <p>{name} - {price}</p><br/>
             <p>{description}</p><br/>
@@ -31,7 +32,7 @@
                     </tr>
                 {stock}
                     <tr align="center">
-                    <td><a href="/item/{code}">{name}<a></td>
+                    <td><a href="/sales/item/{code}">{name}<a></td>
                         <td>{price}</td>
                         <td>{description}</td>
                         <td><input type="checkbox" name="cart" value="{code}"></td>
