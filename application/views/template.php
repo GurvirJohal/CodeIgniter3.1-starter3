@@ -26,13 +26,15 @@ if (!defined('APPPATH'))
                     <a class="brand" href="/"><img height="35" width="35" src="/assets/images/logo.png"/></a>
                     {menubar} </div>
             </div>           
-            <div id="content">
-                <h1><center>{pagetitle}</center></h1>
-                {content}
-            </div>
-            <div id="footer" class="span12">
-                Copyright &copy; 2016,  <a href="mailto:someone@somewhere.com">Me</a>.
-            </div>
+            <center>
+                <div id="content" style=" min-height:500px">
+                    <h1>{pagetitle}</h1>
+                    {content}
+                </div>
+                <div id="footer">
+                    <p>Copyright &copy; 2016, <a href="mailto:someone@somewhere.com">Me</a>.</p>
+                </div>
+            </center>
         </div>
         <script src="/assets/js/jquery-1.11.1.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>
