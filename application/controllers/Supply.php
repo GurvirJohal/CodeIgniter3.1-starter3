@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  *
  * @author Thach
  */
-class Receiving extends Application
+class Supply extends Application
 {
         /**
          * Default Constructor
