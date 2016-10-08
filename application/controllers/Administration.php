@@ -3,9 +3,15 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Description of Administration
+ * Administrator page should provide for editing all of the data tables. This could
+ * be presenting each as an HTML table, with "edit" & "delete" buttons beside each row, 
+ * and with an additional "add" button somewhere. You could provide a tabbed interface, 
+ * with a different tab for each table. You could provide a drill-down interface, where
+ * the main administrator page had links to further pages for each table. The recipe table
+ * will be the most complicated!
  *
- * @author Theresa
+ * You do not need to implement any CRUD, just build & display the HTML forms that
+ * will be used for that.
  */
 class Administration extends Application
 {
