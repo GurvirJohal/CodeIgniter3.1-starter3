@@ -19,15 +19,35 @@ class Production extends Application
 	public function index()
 	{
             $this->load->model('recipes');
-            $this->data['pagebody'] = 'homepage';
+            $this->data['pagebody'] = 'production';
+            
             // build the list of authors, to pass on to our view
             $source = $this->recipes->all();
             $recipes = array ();
             foreach ($source as $record)
             {
-                    $recipes[] = array ('code' => $record['code']);
+                $recipes[] = array ('code' => $record['code'],
+                                    'name' => $record['name']
+                                   );
+                // ~Not sure about this part!!!!
+                $recipIngre[] = array ('ingredients' => $record['ingredients']);
             }
+            //The production page should show recipes, and for the selected one,
+            //show the ingredients that go into it, flagging any that are not on
+            // hand. Log any items made, without updating inventory.
+            //Recipes page: should have...
+            //list of the item NAMES
+            
             $this->data['recipes'] = $recipes;
+            
             $this->render();
 	}
+        
+        public function gimme($id)
+        {
+            $this->data['pagebody'] = 'ingredients';	//views/ingridents	
+            $source = $this->recipes->get($id);
+            $this->data = array_merge($this->data, $source);
+            $this->render();
+        }
 }
