@@ -30,7 +30,8 @@ class Receiving extends Application
             $supplies = array ();
             foreach ($source as $record)
             {
-                    $supplies[] = array ('code' => $record['code'], 'name' => $record['name'],
+                    $supplies[] = array ('code' => $record['code'],
+                                        'name' => $record['name'],
 					'description' => $record['description'], 'receiving_unit' => $record['receiving_unit'],
 					'receiving_cost' => $record['receiving_cost'], 'stocking_unit' => $record['stocking_unit'],
 					'quantity' => $record['quantity']);

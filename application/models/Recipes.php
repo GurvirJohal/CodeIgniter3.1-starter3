@@ -1,9 +1,10 @@
 <?php
 
 /*
- * the list of raw materials that go into the creation of one product for sale or one service offered. 
- * With sample values in brackets ... a recipe code (Legendary Burger), a description (single patty, 
- * original burger), and the recipe ingredients (1 patty, 1 bun, 2 oz triple-O sauce, 1 pickle).
+ * The list of raw materials that go into the creation of one product for sale or one service offered. 
+ * With sample values in brackets ... a recipe code (Refresh), a description (Sharpen concentration, 
+ * increase stamina, and revitalize your senses), and the recipe ingredients (1 Spearmint, 1 Lavendar,
+ * 1 Eucalyptus, 1 Lemon, 0.5 Rosewood, 0.5 Cedarwood).
  */
 class Recipes extends CI_Model{
     //Initialize the array of recipes

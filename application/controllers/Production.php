@@ -32,11 +32,6 @@ class Production extends Application
                 // ~Not sure about this part!!!!
                 $recipIngre[] = array ('ingredients' => $record['ingredients']);
             }
-            //The production page should show recipes, and for the selected one,
-            //show the ingredients that go into it, flagging any that are not on
-            // hand. Log any items made, without updating inventory.
-            //Recipes page: should have...
-            //list of the item NAMES
             
             $this->data['recipes'] = $recipes;
             

@@ -1,15 +1,9 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Stock
- *
- * @author Tess
+ * Assembled goods or services ready to sell. Again with sample values ... a recipe code
+ * (Refresh), a description (Sharpen concentration, increase stamina, and revitalize your
+ * senses), a selling price ($14.95), quantity on hand if pre-made (4).
  */
 class Stock extends CI_Model{
     //Initialize the array of stock

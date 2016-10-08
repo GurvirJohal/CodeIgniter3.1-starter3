@@ -3,13 +3,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
- * Description of Sales
- *
- * @author Theresa
+ * Sales page should show a menu of purchaseable items, with description 
+ * & price for each. The goal of this page is to build an order with 
+ * multiple items, and to log the transaction that would result if 
+ * the sale proceeded for real.
  */
 class Sales extends Application
 {
-
+    
         /**
          * Default Constructor
          */

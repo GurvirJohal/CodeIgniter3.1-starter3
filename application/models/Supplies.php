@@ -1,15 +1,10 @@
 <?php
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of Supplies
- *
- * @author Tess Robertson
+ * The raw materials that you might keep in a pantry . With sample values in brackets ... 
+ * these will have a code of some sort (0), a description (Lavendar oil), a receiving unit 
+ * (case of 12 bottles), a receiving cost ($ per unit), a stocking unit (5mL bottles), and 
+ * quantities on hand. You will need to deal with partial units (eg an open jar).
  */
 class Supplies extends CI_Model{
     
