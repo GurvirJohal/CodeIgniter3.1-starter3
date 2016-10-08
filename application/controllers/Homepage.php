@@ -60,7 +60,7 @@ class Homepage extends Application
 	public function saleCal() {
 	        $this->load->model('supplies');
             // gets a list of supplies
-            $source = $this->supplies->all();
+            $source = $this->stock->all();
             $supplies = array ();
 			
 			//Total
@@ -78,3 +78,4 @@ class Homepage extends Application
 			$this->data['totalInc'] = $totalInc;
 	}
 
+}
