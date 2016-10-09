@@ -66,21 +66,5 @@ class Production extends Application
             $this->data = array_merge($this->data, $result, $recipe);
             $this->render();
         }
-        
-/**
-        public function get($code){
-            //the pagebody of the ingredients and amounts to make an item/recipe
-            $this->data['pagebody'] = 'ingredients';
-            
-            //
-            $source = $this->recipes->get($code);
-            $recipes[] = array('id' => $source['code'],
-                                              'name' => $source['name'],
-                                              'description' => $source['dscription'],
-                                              'ingredients' => $source['ingredients']);  
-            $this->data['recipes'] = $recipes;
-            $this->render();
-        }
- * 
- */
+
 }
