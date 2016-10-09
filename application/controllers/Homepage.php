@@ -47,10 +47,10 @@ class Homepage extends Application
 			//Calculates
             foreach ($source as $record)
             {
-					$rUniut = intval(preg_replace('/[^0-9]+/', '', $record['receiving_unit']), 10);
-					$rCost = intval(preg_replace('/[^0-9]+/', '', $record['receiving_cost']), 10);
-					$inv = intval(preg_replace('/[^0-9]+/', '', $record['quantity']), 10);
-					$totalCost += (($inv / $rUniut) * $rCost);
+                $rUniut = intval(preg_replace('/[^0-9]+/', '', $record['receiving_unit']), 10);
+                $rCost = intval(preg_replace('/[^0-9]+/', '', $record['receiving_cost']), 10);
+                $inv = intval(preg_replace('/[^0-9]+/', '', $record['quantity']), 10);
+                $totalCost += (($inv / $rUniut) * $rCost);
 					
             }
 			//Makes a data field
