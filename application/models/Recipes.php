@@ -212,7 +212,7 @@ class Recipes extends CI_Model{
         // iterate over the data until we find the one we want
         foreach ($this->data as $record) {
             if ($record['code'] == $code) {
-                return $record['ingredients']['item1'];
+                return $record['ingredients'];
             }
         }
         return null;

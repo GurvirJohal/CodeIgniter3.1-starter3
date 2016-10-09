@@ -45,10 +45,25 @@ class Production extends Application
         {
             $this->data['pagebody'] = 'ingredients';
             
+            
             $recipe = $this->recipes->get($id);
             $source = $this->recipes->getIngre($id);
+            $template = array(
+                'table_open' => '<table border="1" cellpadding="2" cellspacing="1" class="mytable">'
+            );
+
+            $this->table->set_template($template);
+            $this->table->set_heading('Ingredients','Amount');
             
-            $this->data = array_merge($this->data, $source, $recipe);
+            $result = array();
+            foreach($source as $item){
+                array_push($result,$item);
+            }
+            
+            $res = $this->table->generate($result);
+            
+            $this->data['result'] = $res;
+            $this->data = array_merge($this->data, $result, $recipe);
             $this->render();
         }
         
